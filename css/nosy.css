@@ -87,6 +87,20 @@
     font-size: 15px;
     padding: 10px 15px;
 }
+.article-card-1.inline{
+    display: inline-flex;
+    height: auto;
+    width: auto;
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+@media (max-width: 500px){
+    .article-card-1{
+        display: inline-flex;
+        width: auto;
+        flex-shrink: unset;
+    }
+}
 
 .article-card-2{
     display: flex;
@@ -127,6 +141,20 @@
 .article-card-2 .button-2,.article-card-2 .button-2{
     font-size: 15px;
     padding: 10px 15px;
+}
+.article-card-2.inline{
+    display: inline-flex;
+    height: auto;
+    width: auto;
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+@media (max-width: 500px){
+    .article-card-2{
+        display: inline-flex;
+        width: auto;
+        flex-shrink: unset;
+    }
 }
 
 .container-1{
