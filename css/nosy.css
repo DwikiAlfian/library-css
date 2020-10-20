@@ -14,6 +14,126 @@
     z-index: 0;
 }
 
+/* NAVBAR */
+.navbar-1{
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(20,20,20);
+    padding: 5px;
+    align-items: center;
+    z-index: 1;
+}
+.navbar-1 a{
+    margin-right: 5px;
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: 800;
+    border-radius: 5px;
+    transition: background-color 150ms, color 150ms;
+}
+.navbar-1 a:hover{
+    background-color: rgba(255,255,255);
+    color: black;
+}
+.navbar-1 a#active{
+    background-color: white;
+    color: black;
+}
+.navbar-1 a:nth-last-child(1){
+    margin-right: 0;
+}
+.navbar-1.scroll{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-right: 10px;
+}
+.navbar-1 button#sidepanel{
+    height: 35px;
+    width: 25px;
+    background-color: transparent;
+    border: none;
+    position: relative;
+    margin-right: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.navbar-1 button#sidepanel::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    left: 0;
+    top: 9px;
+    transition: transform 150ms;
+}
+.navbar-1 button#sidepanel::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    left: 0;
+    bottom: 9px;
+    transition: transform 150ms;
+}
+.navbar-1 button#sidepanel.open::before{
+    transform: rotateZ(45deg) translateX(5px) translateY(5px);
+}
+.navbar-1 button#sidepanel.open::after{
+    transform: rotateZ(-45deg) translateX(5px) translateY(-5px);
+}
+
+.sidepanel-1{
+    z-index: 1;
+    position: fixed;
+    left: 10px;
+    top: 60px;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    width: 250px;
+    flex-direction: column;
+    background-color: rgba(20,20,20);
+    box-shadow: 0 3px 5px 1px rgba(0,0,0,.5);
+    height: 89%;
+    transition: transform 150ms;
+    transform: translateX(-300px);
+}
+.sidepanel-1.active{
+    transform: translateX(0);
+}
+.sidepanel-1:hover{
+    overflow-y: scroll;
+}
+.sidepanel-1 title{
+    display: inline-block;
+    color: white;
+    font-weight: 800;
+    font-size: 25px;
+    margin: 5px;
+    border-bottom: 1px solid rgba(100,100,100);
+    padding-bottom: 10px;
+}
+.sidepanel-1 a{
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+    background-color: rgba(35,35,35);
+    transition: background-color 100ms, color 100ms;
+}
+.sidepanel-1 a:hover{
+    background-color: white;
+    color: black;
+}
+
 /* ARTICLE HEADER */
 .article-header{
     text-align: center;
@@ -305,7 +425,7 @@
     border-radius: 10px;
     padding: 15px;
     background-color: rgba(20,20,20);
-    box-shadow: 0 3px 7px 2px rgba(0,0,0,.3);
+    box-shadow: 0 3px 7px 2px rgba(0,0,0,.5);
 }
 .form-1 title{
     display: inline-block;
@@ -329,6 +449,11 @@
     color: rgba(100,100,100);
     width: 60%;
 }
+@media (max-width: 600px){
+    .form-1 p{
+        width: 90%;
+    }
+}
 .form-1 input:focus{
     background-color: white;
     color: black;
@@ -349,7 +474,7 @@
 }
 .form-1 p#rule::before{
     content: '*';
-    color: rgba(20,255,255);
+    color: rgba(0,250,75);
 }
 .form-1 a{
     background-image: linear-gradient(45deg, rgba(0,250,75), rgba(0,255,175));
@@ -359,4 +484,36 @@
 }
 .form-1 a:hover{
     background-image: linear-gradient(45deg, rgba(255,0,20), rgba(255,100,150));
+}
+.form-1.transparent{
+    background-color: transparent;
+    box-shadow: 0 0 0 0 rgba(0,0,0,.0);
+}
+.form-1.center{
+    text-align: center;
+}
+.form-1.center .inline title{
+    text-align: start;
+}
+.form-1.center p{
+    width: unset;
+}
+.form-1.black title{
+    color: black;
+}
+.form-1.black input{
+    color: black;
+}
+.form-1.black input:focus{
+    background-color: rgba(0,0,0);
+    color: white;
+}
+.form-1.black p#rule::before{
+    color: rgba(0,150,25);
+}
+.form-1 a{
+    background-image: linear-gradient(45deg, rgba(0,150,25), rgba(0,250,75));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
 }
