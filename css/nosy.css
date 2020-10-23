@@ -214,10 +214,9 @@
     color: rgba(125,125,125);
 }
 
-.article-card-1{
+.article-card{
     display: flex;
     flex-direction: column;
-    /* flex-shrink: 0; */
     align-items: flex-start;
     justify-content: center;
     position: relative;
@@ -230,10 +229,10 @@
     box-shadow: 0 3px 10px 1px rgba(0,0,0,.5);
     margin: 5px;
 }
-.article-card-1.small{
+.article-card.small{
     width: 350px;
 }
-.article-card-1::before{
+.article-card::before{
     position: absolute;
     content: '';
     width: 100%;
@@ -243,21 +242,21 @@
     background-image: linear-gradient(45deg, rgba(0,0,0), rgba(0,0,0,.4), rgba(0,0,0,.6));
     border-radius: 15px;
 }
-.article-card-1 title{
+.article-card title{
     display: inline-block;
     font-weight: 800;
     color: white;
     font-size: 40px;
 }
-.article-card-1 p{
+.article-card p{
     color: white;
     margin: 10px 0;
 }
-.article-card-1 .button-1,.article-card-1 .button-2{
+.article-card .button-1,.article-card .button-2{
     font-size: 15px;
     padding: 10px 15px;
 }
-.article-card-1.inline{
+.article-card.inline{
     display: inline-flex;
     height: auto;
     width: auto;
@@ -265,82 +264,43 @@
     padding-top: 35px;
     padding-bottom: 35px;
 }
-.article-card-1.wrap{
+.article-card.wrap{
     display: inline-flex;
     height: auto;
     width: 100%;
     padding-top: 35px;
     padding-bottom: 35px;
 }
-.article-card-1.unset{
+.article-card.unset{
     display: inline-flex;
     height: auto;
     width: unset;
     padding-top: 35px;
     padding-bottom: 35px;
 }
-@media (max-width: 500px){
-    .article-card-1{
-        display: inline-flex;
-        width: auto;
-        flex-shrink: unset;
-    }
+.article-card.unset-width{
+    display: inline-flex;
+    width: unset;
+    padding-top: 35px;
+    padding-bottom: 35px;
 }
-
-.article-card-2{
-    display: flex;
-    flex-direction: column;
-    flex-shrink: 0;
-    align-items: flex-start;
-    justify-content: center;
-    position: relative;
-    background-position: center;
-    background-size: cover;
-    border-radius: 15px;
-    height: 400px;
-    width: 300px;
-    padding: 20px 15px 20px 20px;
-    box-shadow: 0 3px 10px 2px rgba(0,0,0,.5);
-    margin: 5px;
-}
-.article-card-2::before{
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-image: linear-gradient(45deg, rgba(0,0,0), rgba(0,0,0,.4), rgba(0,0,0,.6));
-    border-radius: 15px;
-}
-.article-card-2 title{
-    display: inline-block;
-    font-weight: 800;
-    color: white;
-    font-size: 40px;
-}
-.article-card-2 p{
-    color: white;
-    margin: 10px 0;
-}
-.article-card-2 .button-2,.article-card-2 .button-2{
-    font-size: 15px;
-    padding: 10px 15px;
-}
-.article-card-2.inline{
+.article-card.unset-height{
     display: inline-flex;
     height: auto;
-    width: auto;
     padding-top: 35px;
     padding-bottom: 35px;
 }
 @media (max-width: 500px){
-    .article-card-2{
+    .article-card{
         display: inline-flex;
         width: auto;
         flex-shrink: unset;
     }
+    .article-card.small{
+        width: unset;
+    }
 }
+
 
 .container-1{
     padding: 15px;
@@ -405,11 +365,11 @@
 }
 
 .button-1.blue{
-    background-color: rgb(0,150,250);
+    background-color: rgb(0,50,100);
     color: white;
 }
 .button-1.blue:focus{
-    background-color: rgba(20,100,150);
+    background-color: rgba(0,0,50);
 }
 
 .button-1.red{
@@ -417,7 +377,7 @@
     color: white;
 }
 .button-1.red:focus{
-    background-color: rgba(200,20,20);
+    background-color: rgba(100,0,0);
 }
 
 .button-2{
@@ -475,7 +435,7 @@
     color: white;
     font-weight: 800;
 }
-.form-1 input{
+.form-1 input[type=text], .form-1 input[type=password]{
     border-style: none;
     padding: 10px;
     font-size: 17px;
@@ -496,7 +456,7 @@
         width: 90%;
     }
 }
-.form-1 input:focus{
+.form-1 input[type=text]:focus, .form-1 input[type=password]:focus{
     background-color: white;
     color: black;
 }
@@ -558,4 +518,115 @@
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
+}
+
+/* LINK */
+.link{
+    text-decoration: none;
+    font-weight: 800;
+    color: black;
+    border-bottom: 2px dotted transparent;
+}
+.link:hover{
+    border-bottom: 2px dotted black;
+    background-origin: border-box;
+}
+.link.link-white{
+    color: white;
+}
+.link.link-white:hover{
+    border-color: white;
+}
+.link.link-2{
+    display: inline-block;
+    padding: 5px;
+    margin: 3px;
+    background-color: rgba(100,100,100,.4);
+    border-style: none;
+    border-radius: 5px;
+    transition: background-color 150ms, color 150ms;
+}
+.link.link-2:hover{
+    background-color: rgba(0,0,0,.9);
+    color: white;
+}
+.link.link-2.link-white{
+    color: white;
+}
+.link.link-2.link-white:hover{
+    color: black;
+    background-color: rgba(255,255,255,.9);
+}
+.link.link-3{
+    display: block;
+    border-style: none;
+    background-color: rgba(100,100,100,.4);
+    padding: 10px 15px;
+    border-radius: 20px;
+    color: black;
+    transition: background-color 150ms, color 150ms, transform 200ms;
+    box-shadow: 0 7px 7px -3px rgba(0,0,0,.5);
+    margin-bottom: 10px;
+}
+.link.link-3.green{
+    background-color: rgba(0,200,0);
+}
+.link.link-3.red{
+    background-color: rgba(255,10,10);
+    color: white;
+}
+.link.link-3:hover{
+    transform: translateY(-2px);
+    background-color: rgba(0,0,0);
+    color: white;
+}
+
+/* ALERT */
+.alert{
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 15px;
+    font-weight: 800;
+    font-size: 20px;
+    position: relative;
+    box-shadow: 0 3px 7px 2px rgba(0,0,0,.4);
+    margin: 10px;
+    background-color: rgba(20,20,20);
+    color: white;
+}
+.alert::before{
+    content: '?';
+    flex-shrink: 0;
+    display: inline-flex;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    background-color: rgba(255,255,255);
+    border-radius: 10px;
+    height: 35px;
+    width: 35px;
+}
+.alert.alert-danger{
+    background-color: rgba(150,0,0);
+}
+.alert.alert-danger::before{
+    content: '!';
+    color: rgba(150,0,0);
+}
+.alert.alert-success{
+    background-color: rgba(0,125,0);
+}
+.alert.alert-success::before{
+    content: 'v';
+    color: rgba(0,125,0);
+}
+.alert.alert-tips{
+    background-color: rgba(0,50,100);
+}
+.alert.alert-tips::before{
+    content: '~';
+    color: rgba(0,50,100);
 }
