@@ -1,4 +1,5 @@
 // CONST DECLARATION
+const body = document.querySelector('body');
 const navbar = document.querySelector('.navbar-1');
 const sidepanel = document.querySelector('.sidepanel-1');
 const navbarButton = document.querySelector('.navbar-1 #sidepanel');
@@ -6,11 +7,11 @@ const navbarButton = document.querySelector('.navbar-1 #sidepanel');
 let navStat = false;
 navbarButton.addEventListener('click', () => {
     if(!navStat){
-        sidepanel.classList.add('active');
+        body.classList.add('active');
         navbarButton.classList.add('open');
         navStat = true;
     } else {
-        sidepanel.classList.remove('active');
+        body.classList.remove('active');
         navbarButton.classList.remove('open');
         navStat = false;
     }

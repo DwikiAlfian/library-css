@@ -13,6 +13,12 @@
     font-family: 'normal';
     z-index: 0;
 }
+body *{
+    transition: opacity 150ms;
+}
+body{
+    transition: background-color 150ms, transform 150ms;
+}
 
 /* NAVBAR */
 .navbar-1{
@@ -90,22 +96,37 @@
     transform: rotateZ(-45deg) translateX(5px) translateY(-5px);
 }
 
+body.active{
+    transform: translateX(250px);
+    /* background-color: black; */
+}
+body.active *{
+    opacity: .9;
+}
+body.active .navbar-1, body.active .navbar-1 *{
+    opacity: 1;
+}
+body.active .sidepanel-1{
+    opacity: 1;
+}
+body.active .sidepanel-1 *{
+    opacity: 1;
+}
+
 .sidepanel-1{
     z-index: 1;
     position: fixed;
-    left: 10px;
-    top: 60px;
+    left: 0;
+    top: 0;
     padding: 10px;
-    border-radius: 10px;
     display: flex;
     width: 250px;
     flex-direction: column;
     background-color: rgba(20,20,20);
     box-shadow: 0 3px 5px 1px rgba(0,0,0,.5);
-    height: 89%;
-    opacity: 0;
+    height: 100%;
     transition: transform 150ms cubic-bezier(0.19, 1, 0.22, 1), opacity 150ms;
-    transform: translateX(-300px);
+    transform: translateX(-250px);
 }
 .sidepanel-1.active{
     opacity: 1;
@@ -139,41 +160,6 @@
 .sidepanel-1 a:hover{
     background-color: white;
     color: black;
-}
-@media(min-height: 700px){
-    .sidepanel-1{
-        height: 99%;
-    }
-}
-@media(max-width: 500px){
-    .sidepanel-1{
-        width: 96%;
-        transform: translateX(-110%);
-    }
-}
-@media(max-width: 430px){
-    .sidepanel-1{
-        width: 95%;
-        transform: translateX(-110%);
-    }
-}
-@media(max-width: 350px){
-    .sidepanel-1{
-        width: 94%;
-        transform: translateX(-110%);
-    }
-}
-@media(max-width: 280px){
-    .sidepanel-1{
-        width: 93%;
-        transform: translateX(-110%);
-    }
-}
-@media(max-width: 240px){
-    .sidepanel-1{
-        width: 92%;
-        transform: translateX(-110%);
-    }
 }
 
 /* ARTICLE HEADER */
@@ -525,60 +511,18 @@
     text-decoration: none;
     font-weight: 800;
     color: black;
-    border-bottom: 2px dotted transparent;
+    border-bottom: 2px dotted black;
+    background-origin: content-box;
 }
 .link:hover{
-    border-bottom: 2px dotted black;
-    background-origin: border-box;
+    border-bottom: 2px dotted transparent;
 }
 .link.link-white{
     color: white;
-}
-.link.link-white:hover{
     border-color: white;
 }
-.link.link-2{
-    display: inline-block;
-    padding: 5px;
-    margin: 3px;
-    background-color: rgba(100,100,100,.4);
-    border-style: none;
-    border-radius: 5px;
-    transition: background-color 150ms, color 150ms;
-}
-.link.link-2:hover{
-    background-color: rgba(0,0,0,.9);
-    color: white;
-}
-.link.link-2.link-white{
-    color: white;
-}
-.link.link-2.link-white:hover{
-    color: black;
-    background-color: rgba(255,255,255,.9);
-}
-.link.link-3{
-    display: block;
-    border-style: none;
-    background-color: rgba(100,100,100,.4);
-    padding: 10px 15px;
-    border-radius: 20px;
-    color: black;
-    transition: background-color 150ms, color 150ms, transform 200ms;
-    box-shadow: 0 7px 7px -3px rgba(0,0,0,.5);
-    margin-bottom: 10px;
-}
-.link.link-3.green{
-    background-color: rgba(0,200,0);
-}
-.link.link-3.red{
-    background-color: rgba(255,10,10);
-    color: white;
-}
-.link.link-3:hover{
-    transform: translateY(-2px);
-    background-color: rgba(0,0,0);
-    color: white;
+.link.link-white:hover{
+    border-color: transparent;
 }
 
 /* ALERT */
@@ -629,4 +573,35 @@
 .alert.alert-tips::before{
     content: '~';
     color: rgba(0,50,100);
+}
+.alert span#close{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    height: 35px;
+    flex-shrink: 0;
+    width: 35px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: rgba(150,150,150,.5);
+    transition: background-color 150ms;
+}
+.alert span#close:hover{
+    background-color: rgba(255,255,255,.9);
+}
+.alert span#close::before{
+    content: 'x';
+    transition: color 150ms;
+}
+.alert span#close:hover::before{
+    color: black;
+}
+.alert.alert-fixed{
+    z-index: 2;
+    position: fixed;
+    top: 50px;
+    left: 10px;
+    right: 10px;
 }
