@@ -172,6 +172,12 @@ body.active .alert.alert-fixed{
     background-color: white;
     color: black;
 }
+.sidepanel-1 .article-card{
+    margin: 0;
+}
+.sidepanel-1 .article-card p{
+    margin-left: 5px;
+}
 
 /* ARTICLE HEADER */
 .article-header{
@@ -484,30 +490,30 @@ body.active .alert.alert-fixed{
 .form-1 a:hover{
     background-image: linear-gradient(45deg, rgba(255,0,20), rgba(255,100,150));
 }
-.form-1.transparent{
+.form-1.form-transparent{
     background-color: transparent;
     box-shadow: 0 0 0 0 rgba(0,0,0,.0);
 }
-.form-1.center{
+.form-1.form-center{
     text-align: center;
 }
-.form-1.center .inline title{
+.form-1.form-center .inline title{
     text-align: start;
 }
-.form-1.center p{
+.form-1.form-center p{
     width: unset;
 }
-.form-1.black title{
+.form-1.form-black-font title{
     color: black;
 }
-.form-1.black input{
+.form-1.form-black-font input{
     color: black;
 }
-.form-1.black input:focus{
+.form-1.form-black-font input:focus{
     background-color: rgba(0,0,0);
     color: white;
 }
-.form-1.black p#rule::before{
+.form-1.form-black-font p#rule::before{
     color: rgba(0,150,25);
 }
 .form-1 a{
@@ -515,6 +521,19 @@ body.active .alert.alert-fixed{
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
+}
+.form-1.form-white{
+    background-color: rgba(255,255,255);
+}
+.form-1.form-white title{
+    color: black;
+}
+.form-1.form-white input{
+    color: black;
+}
+.form-1.form-white input:focus{
+    background-color: rgba(0,0,0);
+    color: white;
 }
 
 /* LINK */
@@ -622,4 +641,10 @@ body.active .alert.alert-fixed{
 .alert.close{
     opacity: 0;
     display: none;
+}
+
+
+/* IMPORTANT CSS RULE HERE */
+*.no-margin{
+    margin: 0;
 }
