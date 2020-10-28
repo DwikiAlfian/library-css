@@ -140,6 +140,7 @@ body.active .alert.alert-fixed{
         left: -101%;
         top: 45px;
         width: 100%;
+        height: 150%;
     }
 }
 .sidepanel-1:hover{
