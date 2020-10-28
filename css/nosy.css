@@ -173,6 +173,7 @@ body.active .alert.alert-fixed{
     color: black;
 }
 .sidepanel-1 .article-card{
+    flex-shrink: 0;
     margin: 0;
 }
 .sidepanel-1 .article-card p{
