@@ -3,6 +3,15 @@ const body = document.querySelector('body');
 const navbar = document.querySelector('.navbar-1');
 const sidepanel = document.querySelector('.sidepanel-1');
 const navbarButton = document.querySelector('.navbar-1 #sidepanel');
+const alertClose = document.querySelectorAll('.alert #close');
+
+var alertCloseBtn;
+
+for(alertCloseBtn = 0; alertCloseBtn < alertClose.length; alertCloseBtn++){
+    alertClose[alertCloseBtn].addEventListener('click', function(){
+        this.parentElement.classList.add('close');
+    });
+}
 
 let navStat = false;
 navbarButton.addEventListener('click', () => {
