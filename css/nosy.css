@@ -175,10 +175,16 @@ body.active .alert.alert-fixed{
 }
 .sidepanel-1 .article-card{
     flex-shrink: 0;
+    width: 230px;
     margin: 0;
 }
 .sidepanel-1 .article-card p{
     margin-left: 5px;
+}
+@media (max-width: 750px){
+    .sidepanel-1 .article-card{
+        width: unset;
+    }
 }
 
 /* ARTICLE HEADER */
