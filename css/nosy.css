@@ -671,6 +671,90 @@ body.active .alert.alert-fixed{
     display: none;
 }
 
+/* FOOTER */
+.footer{
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    background-color: rgba(20,20,20);
+    color: white;
+}
+.footer .body #logo{
+    margin-bottom: 15px;
+}
+.footer a{
+    display: inline-flex;
+    color: rgba(100,100,100);
+    /* color: white; */
+    text-decoration: none;
+    border-bottom: 2px dotted rgba(100,100,100);
+}
+.footer a:hover{
+    color: white;
+    border-bottom: 2px dotted rgba(255,255,255);
+}
+.footer #logo{
+    font-size: 50px;
+    font-weight: 800;
+}
+.footer .body{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+}
+.footer .strip{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(15,15,15);
+    padding: 5px;
+}
+.footer .body a{
+    margin-bottom: 2px;
+}
+.footer .body a:last-child{
+    margin-bottom: 0;
+}
+.footer .strip div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.footer .strip div a{
+    margin-right: 5px;
+}
+.footer .strip div a:last-child{
+    margin-right: 0;
+}
+.footer .stacked{
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+}
+.footer .stacked div{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: flex-start;
+}
+.footer .stacked div:nth-child(1){
+    margin-left: unset;
+}
+.footer .stacked div:last-child{
+    margin-right: unset;
+}
+@media (max-width: 600px){
+    .footer .stacked{
+        flex-direction: column;
+    }
+    .footer .stacked div{
+        margin-left: unset;
+        margin-right: unset;
+    }
+}
+
 
 /* IMPORTANT CSS RULE HERE */
 *.no-margin{
