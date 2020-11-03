@@ -395,3 +395,31 @@
 .z-10{
     z-index: 10 !important;
 }
+
+/* Display */
+.display-block{
+    display: block;
+}
+.display-flex{
+    display: flex;
+}
+.display-inblock{
+    display: inline-block;
+}
+.display-inflex{
+    display: inline-flex;
+}
+
+/* Position */
+.pos-rel{
+    position: relative;
+}
+.pos-abs{
+    position: absolute;
+}
+.pos-fix{
+    position: fixed;
+}
+.pos-sta{
+    position: static;
+}
