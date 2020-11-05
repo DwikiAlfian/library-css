@@ -423,3 +423,70 @@
 .pos-sta{
     position: static;
 }
+
+/* Overflow */
+.ov-hidden{
+    overflow: hidden;
+}
+.ov-auto{
+    overflow: auto;
+}
+.ov-scroll{
+    overflow: scroll;
+}
+.ov-visible{
+    overflow: visible;
+}
+.ov-inherit{
+    overflow: inherit;
+}
+.ov-initial{
+    overflow: initial;
+}
+.ov-unset{
+    overflow: unset;
+}
+
+.ov-x-hidden{
+    overflow-x: hidden;
+}
+.ov-x-auto{
+    overflow-x: auto;
+}
+.ov-x-scroll{
+    overflow-x: scroll;
+}
+.ov-x-visible{
+    overflow-x: visible;
+}
+.ov-x-inherit{
+    overflow-x: inherit;
+}
+.ov-x-initial{
+    overflow-x: initial;
+}
+.ov-x-unset{
+    overflow-x: unset;
+}
+
+.ov-y-hidden{
+    overflow-y: hidden;
+}
+.ov-y-auto{
+    overflow-y: auto;
+}
+.ov-y-scroll{
+    overflow-y: scroll;
+}
+.ov-y-visible{
+    overflow-y: visible;
+}
+.ov-y-inherit{
+    overflow-y: inherit;
+}
+.ov-y-initial{
+    overflow-y: initial;
+}
+.ov-y-unset{
+    overflow-y: unset;
+}
