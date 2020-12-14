@@ -1,8 +1,8 @@
 // CONST DECLARATION
 const body = document.querySelector('body');
-const navbar = document.querySelector('.navbar-1');
-const sidepanel = document.querySelector('.sidepanel-1');
-const navbarButton = document.querySelector('.navbar-1 #sidepanel');
+const navbar = document.querySelector('.navbar');
+const sidepanel = document.querySelector('.sidepanel');
+const navbarButton = document.querySelector('.navbar #sidepanel');
 const alertClose = document.querySelectorAll('.alert #close');
 
 var alertCloseBtn;
@@ -16,11 +16,11 @@ for(alertCloseBtn = 0; alertCloseBtn < alertClose.length; alertCloseBtn++){
 let navStat = false;
 navbarButton.addEventListener('click', () => {
     if(!navStat){
-        body.classList.add('active');
+        sidepanel.classList.add('open');
         navbarButton.classList.add('open');
         navStat = true;
     } else {
-        body.classList.remove('active');
+        sidepanel.classList.remove('open');
         navbarButton.classList.remove('open');
         navStat = false;
     }
